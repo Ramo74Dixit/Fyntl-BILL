@@ -51,6 +51,8 @@ const billData = {
   generatedBy: "09CYL PR677 4F1ZN",
   validUpto: "25/06/2024",
   transactionTypeDesc: "Outward - Supply",
+  validity_time:"1",
+  generated_time:"04:22 PM",
 };
 
 const App = () => {
