@@ -1,6 +1,6 @@
 import React from "react";
 import Barcode from 'react-barcode';
-import { QRCodeCanvas } from 'qrcode.react'; // or use QRCodeSVG
+import { QRCodeCanvas } from 'qrcode.react';
 
 
 const EWayBill = ({ billData }) => {
@@ -62,12 +62,12 @@ const EWayBill = ({ billData }) => {
 />
   </div>
 </div>
-<div className="border border-gray-300 mb-4"> {/* Reduced margin-bottom */}
-  <h1 className="bg-[#736fb3] text-black p-1 text-sm"> {/* Reduced padding and font size */}
+<div className="border border-gray-300 mb-4"> 
+  <h1 className="bg-[#736fb3] text-black p-1 text-sm"> 
     1. E-WAY BILL Details
   </h1>
 
-  <div className="p-1 border flex flex-col sm:flex-row justify-between text-sm"> {/* Adjusted padding and layout */}
+  <div className="p-1 border flex flex-col sm:flex-row justify-between text-sm"> 
   <div className="flex flex-col sm:flex-row">
     <p className="mb-2 sm:mb-0">
       <span className="font-normal">eWay Bill No:</span>{" "}
@@ -91,7 +91,7 @@ const EWayBill = ({ billData }) => {
 </div>
 
 
-<div className="p-1 border flex justify-between text-sm"> {/* Adjusted padding */}
+<div className="p-1 border flex justify-between text-sm">
   <p>
     <span className="font-normal">Mode:</span>{" "}
     <span className="font-bold">{transMode || "N/A"}</span>
@@ -104,36 +104,33 @@ const EWayBill = ({ billData }) => {
 </div>
 
 
-<div className="p-1 border flex justify-between text-sm"> {/* Adjusted padding */}
+<div className="p-1 border flex justify-between text-sm">
   <p className="flex-1">
     <span className="font-normal">Type:</span>{" "}
     <span className="font-bold">{transactionTypeDesc || "N/A"}</span>
   </p>
-  <p className="flex-1 text-left"> {/* Centered text for better alignment */}
+  <p className="flex-1 text-left">
     <span className="font-normal">Document Details:</span>{" "}
     <span className="font-bold">
       {docType} - {docNo} - {docDate}
     </span>
   </p>
-  <p className="flex-1 text-right"> {/* Right-aligned text */}
+  <p className="flex-1 text-right">
     <span className="font-normal">Transaction Type:</span>{" "}
     <span className="font-bold">{transactionTypeDesc || "N/A"}</span>
   </p>
 </div>
 
 </div>
-
-
       <h4 className="bg-[#736fb3] text-black text-sm p-2 mb-1">
         2. Address Details
       </h4>
-      <div className="flex justify-between mb-4"> {/* Reduced bottom margin */}
-  {/* From Details Section */}
-  <div className="w-1/2 border border-gray-300 bg-white mr-2"> {/* Added border color and adjusted margin */}
-    <h2 className="bg-[#736fb3] text-black p-1 text-sm"> {/* Reduced padding and font size */}
+      <div className="flex justify-between mb-4"> 
+  <div className="w-1/2 border border-gray-300 bg-white mr-2">
+    <h2 className="bg-[#736fb3] text-black p-1 text-sm"> 
       From
     </h2>
-    <div className="p-2 text-sm"> {/* Reduced padding and font size */}
+    <div className="p-2 text-sm">
       <p>
         <span className="font-normal">GSTIN: </span>{" "}
         <span className="font-bold">{fromGstin || "N/A"}</span>
@@ -152,13 +149,11 @@ const EWayBill = ({ billData }) => {
       </p>
     </div>
   </div>
-
-  {/* To Details Section */}
-  <div className="w-1/2 border border-gray-300 bg-white flex-1"> {/* Adjusted border and flex properties */}
-    <h2 className="bg-[#736fb3] text-black p-1 text-sm"> {/* Reduced padding and font size */}
+  <div className="w-1/2 border border-gray-300 bg-white flex-1"> 
+    <h2 className="bg-[#736fb3] text-black p-1 text-sm"> 
       To
     </h2>
-    <div className="p-2 text-sm"> {/* Reduced padding and font size */}
+    <div className="p-2 text-sm">
       <p>
         <span className="font-normal">GSTIN: </span>{" "}
         <span className="font-bold">{toGstin || "N/A"}</span>
@@ -185,32 +180,32 @@ const EWayBill = ({ billData }) => {
           3. Goods Details
         </h2>
         
-        <table className="w-full border-collapse mt-2 text-sm"> {/* Reduced top margin and font size */}
+        <table className="w-full border-collapse mt-2 text-sm"> 
   <thead>
     <tr>
-      <th className="border border-gray-300 p-1">HSN</th> {/* Reduced padding */}
-      <th className="border border-gray-300 p-1">Product & Desc.</th> {/* Shortened header text */}
+      <th className="border border-gray-300 p-1">HSN</th>
+      <th className="border border-gray-300 p-1">Product & Desc.</th>
       <th className="border border-gray-300 p-1">Quantity</th>
-      <th className="border border-gray-300 p-1">Taxable Amount</th> {/* Shortened header text */}
-      <th className="border border-gray-300 p-1">Tax Rate (C+S+I+Cess)</th> {/* Shortened header text */}
+      <th className="border border-gray-300 p-1">Taxable Amount</th>
+      <th className="border border-gray-300 p-1">Tax Rate (C+S+I+Cess)</th>
     </tr>
   </thead>
   <tbody>
     {itemList.map((item, index) => (
       <tr key={index}>
-        <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
+        <td className="border border-gray-300 p-1 text-center"> 
           {item.hsnCode || "N/A"}
         </td>
-        <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
+        <td className="border border-gray-300 p-1 text-center"> 
           {item.productName || "N/A"} & {item.productDesc || "N/A"}
         </td>
-        <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
+        <td className="border border-gray-300 p-1 text-center"> 
           {item.quantity || "N/A"} {item.qtyUnit || "N/A"}
         </td>
-        <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
+        <td className="border border-gray-300 p-1 text-center"> 
           {item.taxableAmount || "N/A"}
         </td>
-        <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
+        <td className="border border-gray-300 p-1 text-center"> 
           {item.sgstRate || "N/A"} + {item.cgstRate || "N/A"} + {item.igstRate || "N/A"} + {item.cessRate || "N/A"}
         </td>
       </tr>
@@ -218,10 +213,10 @@ const EWayBill = ({ billData }) => {
   </tbody>
 </table>
 
-<table className="w-full border-collapse mt-4 text-sm"> {/* Reduced top margin and font size */}
+<table className="w-full border-collapse mt-4 text-sm"> 
   <thead>
     <tr>
-      <th className="border border-gray-300 p-1">Tot. Taxable Amt</th> {/* Reduced padding */}
+      <th className="border border-gray-300 p-1">Tot. Taxable Amt</th> 
       <th className="border border-gray-300 p-1">CGST Amt</th>
       <th className="border border-gray-300 p-1">SGST Amt</th>
       <th className="border border-gray-300 p-1">IGST Amt</th>
@@ -233,43 +228,43 @@ const EWayBill = ({ billData }) => {
   </thead>
   <tbody>
     <tr>
-      <td className="border border-gray-300 p-1 text-center"> {/* Reduced padding */}
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+      <td className="border border-gray-300 p-1 text-center"> 
+        <div className="p-1 border border-gray-300 bg-white rounded"> 
           {totalValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded">
           {cgstValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded">
           {sgstValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded"> 
           {igstValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded">
           {cessValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded"> 
           {cessNonAdvolValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded"> 
           {otherValue || "N/A"}
         </div>
       </td>
       <td className="border border-gray-300 p-1 text-center">
-        <div className="p-1 border border-gray-300 bg-white rounded"> {/* Reduced padding */}
+        <div className="p-1 border border-gray-300 bg-white rounded">
           {totInvValue || "N/A"}
         </div>
       </td>
@@ -279,19 +274,19 @@ const EWayBill = ({ billData }) => {
 
       </div>
 
-      <div className="border border-gray-300 mb-4 bg-white"> {/* Reduced bottom margin */}
-  <h2 className="bg-[#736fb3] text-black font-semibold p-1 text-base"> {/* Reduced padding and font size */}
+      <div className="border border-gray-300 mb-4 bg-white"> 
+  <h2 className="bg-[#736fb3] text-black font-semibold p-1 text-base"> 
     4. Transportation Details
   </h2>
 
-  <div className="flex flex-row justify-between p-2 space-y-1"> {/* Changed to justify-between for left and right alignment */}
-  <div className="flex items-center text-sm"> {/* Smaller font size */}
+  <div className="flex flex-row justify-between p-2 space-y-1"> 
+  <div className="flex items-center text-sm"> 
     <span className="font-normal mr-2">Transporter ID & Name:</span>
     <span className="font-normal">
       {transporterName || "N/A"}, {transporterId || "N/A"}
     </span>
   </div>
-  <div className="flex items-center text-sm"> {/* Smaller font size */}
+  <div className="flex items-center text-sm"> 
     <span className="font-normal mr-2">Transporter Doc. No & Date:</span>
     <span className="font-normal">
       {transDocNo || "N/A"}, {transDocDate || "N/A"}
