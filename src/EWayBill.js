@@ -114,7 +114,6 @@ const EWayBill = ({ billData }) => {
         </div>
 
         <div className="border-box">
-          <h2 className="goods-header">3. Totals</h2>
           <table className="table">
             <thead>
               <tr>
