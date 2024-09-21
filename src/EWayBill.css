@@ -1,77 +1,88 @@
-.ewaybill-container {
-    width: 210mm;
-    height: 297mm;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    margin: 20px auto;
-  }
-  
-  .ewaybill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .qr-code {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .qr-code-style {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-  }
-  
-  .ewaybill-section, .address-section, .goods-details, .transportation-details, .vehicle-details {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .address-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .address-block {
-    width: 48%;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .details-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  table th, table td {
-    border: 1px solid #ccc;
-    padding: 5px;
-    text-align: center;
-  }
-  
-  .barcode-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  h1, h2, h3 {
-    font-weight: bold;
-    margin: 0;
-    padding: 5px 0;
-    background-color: #736fb3;
-    color: black;
-  }
-  
+/* Updated regular CSS */
+.container {
+  width: 210mm;
+  height: 297mm;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header, .address-header, .goods-header, .transport-header, .vehicle-header {
+  background-color: #736fb3;
+  color: black;
+  font-size: 14px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.p-1 {
+  padding: 4px;
+}
+
+.p-2 {
+  padding: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrcode {
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  padding: 4px;
+}
+
+.border-box {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.note {
+  text-align: center;
+  margin-top: 16px;
+}
