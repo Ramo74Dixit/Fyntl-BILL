@@ -1,0 +1,77 @@
+.ewaybill-container {
+    width: 210mm;
+    height: 297mm;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+  }
+  
+  .ewaybill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .qr-code-style {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+  
+  .ewaybill-section, .address-section, .goods-details, .transportation-details, .vehicle-details {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .address-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .address-block {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .barcode-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #736fb3;
+    color: black;
+  }
+  
